@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="line-height: 40px;">
+    <div>关键字: <input type="text" name="keyword" id="keyword">
+        <button id="btn">高亮</button>
+    </div>
+    <div id="text">高亮显示文章中的关键字。</div>
+</body>
+
+<script src="../js/jquery-3.6.0.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+    $("#btn").click(function() {
+        var $keyword = $("#keyword").val();
+        setHeightKeyWord($keyword);
+    });
+});
+
+function setHeightKeyWord(keyword) {
+    /* 获取需要处理的关键字 */
+    var tempHTML = $("#text").html();
+    /* 关键字替换文本 该文本设置有高亮颜色 */
+    var replaceText = "<font style='color:red;'>$1</font>";
+    /* 关键字正则匹配规则 */
+    var r = new RegExp("(" + keyword + ")", "ig");
+    /* 将匹配到的关键字替换成我们预设的文本 */
+    tempHTML = tempHTML.replace(r, replaceText);
+    /* 将文本显示到浏览器上 */
+    $("#text").html(tempHTML);
+};
+</script>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help</title>
+    <link rel="stylesheet" href="../css/help_document.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="logo"><a href="#"><img src="../images/logo.png" width="120" /></a></div>
+            <div class="functiondetail">
+                <div class="menu">
+                    <div class="title">
+                        <a href="#"><img src="../images/icon2.png" width="20" />&nbsp;Bearing data
+                            center<span>></span></a>
+                    </div>
+                    <div class="content" id="contentone">
+                        <a href="#" id="functionname11" onclick="showhelp11()">Physics-based model</a><br>
+                        <a href="#" id="functionname11" onclick="showhelp12()">Signal-based model</a><br>
+                        <a href="#">Signal File Upload</a><br>
+                        <a href="#">CWRU Data Center</a><br>
+                        <a href="#">IMS Bearing Data</a><br>
+                        <a href="#">FEMTO-ST Dataset</a><br>
+                        <a href="#">Paderborn Bearing Data</a><br>
+                        <a href="#">XJTU-SY Dataset</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="title">
+                        <a href="#"><img src="../images/icon2.png" width="20" />Data
+                            augmentation & sample generation<span>></span></a>
+                    </div>
+                    <div class="content">
+                        <a href="#">Image-transformation-based method</a><br>
+                        <a href="#">Generaive Adversarial Network(GAN)</a><br>
+                        <a href="#">Monte Carlo Sampling</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="title">
+                        <a href="#"><img src="../images/icon2.png" width="20" />Data
+                            Processing<span>></span></a>
+                    </div>
+                    <div class="content">
+                        <a href="#">FFT Denoise</a><br>
+                        <a href="#">DWT Denoise</a><br>
+                        <a href="#">EMD Denoise</a><br>
+                        <a href="#">Mean Denoise</a><br>
+                        <a href="#">Wavelet Packet Denoise</a><br>
+                        <a href="#">Fast Kurtogram Filter</a><br>
+                        <a href="#">PSD Threshold Filter</a><br>
+                        <a href="#">Signal Segmentaion</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="title">
+                        <a href="#"><img src="../images/icon2.png" width="20" />Feature
+                            Extraction and reduction<span>></span></a>
+                    </div>
+                    <div class="content">
+                        <a href="#">Time Domain Feature Extraction</a><br>
+                        <a href="#">DWT Energy Entropy</a><br>
+                        <a href="#">DWT Singular Entropy</a><br>
+                        <a href="#">Wavelet Packet Energy Entropy</a><br>
+                        <a href="#">Wavelet Packet Singular Entropy</a><br>
+                        <a href="#">Common Frequency Features</a><br>
+                        <a href="#">EMD</a><br>
+                        <a href="#">OP_FCF</a><br>
+                        <a href="#">GMR_FFT</a><br>
+                        <a href="#">FCF-Ratio</a><br>
+                        <a href="#">Feature Selection</a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="title">
+                        <a href="#"><img src="../images/icon2.png" width="20" />Fault
+                            diagnoise and RUL prediction<span>></span></a>
+                    </div>
+                    <div class="content">
+                        <a href="#">KNN</a><br>
+                        <a href="#">SVM</a><br>
+                        <a href="#">Decision Tree</a><br>
+                        <a href="#">Random Forest</a><br>
+                        <a href="#">Deep Boltzmann Machine</a><br>
+                        <a href="#">Autoencoder(AE)</a><br>
+                        <a href="#">Extra Tree(ET)</a><br>
+                        <a href="#">Bagging</a><br>
+                        <a href="#">CNN</a><br>
+                        <a href="#">LSTM</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="topdiv">
+                <div class="topmenu">
+                    <ul>
+                        <li><a href="../html/homepageV8.html">Homepage</a></li>
+                        <li><a href="../html/databse_intro.html">Data Center</a></li>
+                        <li><a href="../html/help_document.html" class="menu-active">Help</a></li>
+                        <li><a href="#">Kontact Us</a></li>
+                    </ul>
+
+                    <div class="searchdiv">
+                        <input type="search" id="searchbox" placeholder="function name">
+                        <button type="button" id="searchbutton" onclick="search()">search</button>
+                    </div>
+
+                </div>
+                <div class="login">
+                    <img src="../images/tx.png" width="40" /> Muster ▾
+                </div>
+            </div>
+
+            <div class="bottom" style="height: 810px; overflow: auto;">
+                <div class="bottomdiv" id="document11">11</div>
+                <div class="bottomdiv" id="document12">12</div>
+                <div class="bottomdiv" id="">13</div>
+                <div class="bottomdiv" id="">14</div>
+                <div class="bottomdiv" id="">15</div>
+                <div class="bottomdiv" id="">16</div>
+                <div class="bottomdiv" id="">17</div>
+                <div class="bottomdiv" id="">18</div>
+                <div class="bottomdiv" id="">21</div>
+                <div class="bottomdiv" id="">22</div>
+                <div class="bottomdiv" id="">23</div>
+                <div class="bottomdiv" id="">31</div>
+                <div class="bottomdiv" id="">32</div>
+                <div class="bottomdiv" id="">33</div>
+                <div class="bottomdiv" id="">34</div>
+                <div class="bottomdiv" id="">35</div>
+                <div class="bottomdiv" id="">36</div>
+                <div class="bottomdiv" id="">37</div>
+                <div class="bottomdiv" id="">38</div>
+                <div class="bottomdiv" id="">41</div>
+                <div class="bottomdiv" id="">42</div>
+                <div class="bottomdiv" id="">43</div>
+                <div class="bottomdiv" id="">44</div>
+                <div class="bottomdiv" id="">45</div>
+                <div class="bottomdiv" id="">46</div>
+                <div class="bottomdiv" id="">47</div>
+                <div class="bottomdiv" id="">48</div>
+                <div class="bottomdiv" id="">49</div>
+                <div class="bottomdiv" id="">410</div>
+                <div class="bottomdiv" id="">411</div>
+                <div class="bottomdiv" id="">51</div>
+                <div class="bottomdiv" id="">52</div>
+                <div class="bottomdiv" id="">53</div>
+                <div class="bottomdiv" id="">54</div>
+                <div class="bottomdiv" id="">55</div>
+                <div class="bottomdiv" id="">56</div>
+                <div class="bottomdiv" id="">57</div>
+                <div class="bottomdiv" id="">58</div>
+                <div class="bottomdiv" id="">59</div>
+                <div class="bottomdiv" id="">510</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="../js/jquery-3.6.0.js" type="text/javascript"></script>
+<script>
+    // 隐藏所有子标题
+    $(".menu").each(function () {
+        $(this).children(".content").hide();
+    });
+    // 给主标题邦基点定事件
+    $(".title").each(function () {
+        $(this).click(function () {
+            //添加选中样式
+            $(this).parent(".menu").parent(".functiondetail").children(".menu").children(".title").children("a").removeClass("active");
+            $(this).children("a").addClass("active");
+
+            var clicktitle = $(this).parent(".menu").children(".content");
+            if (clicktitle.css("display") != "none") {
+                clicktitle.hide(200);
+            } else {
+                clicktitle.show(200);
+            }
+        });
+    });
+
+    //全局token
+    var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI3NDQ0NzMsInVzZXJfaWQiOjEsImlzX3JlZnJlc2giOmZhbHNlfQ.OEetjkzINaiXHCbciRnIzd_DoSYWlGteiu-XxvmC0gQ";
+
+
+    function search() {
+        var searchName = document.getElementById('searchbox').value;
+        var searchNameValue = searchName.toLowerCase().split(' ');
+
+        var contentName11 = document.getElementById('functionname11');
+        var contentNameValue11 = contentName11.innerText.toLowerCase();
+
+
+        for (var j = 0; j < searchNameValue.length; j++) {
+            if (contentNameValue11.search(searchNameValue[j]) >= 0) {
+                contentName11.style.color = 'yellow';
+                break;
+            }
+            else {
+                contentName11.style.color = '';
+            }
+        }
+
+    };
+
+    // function hiddenallhelp() {
+    //     $(this).children(".bottomdiv").addClass("hidden");
+    // };
+
+    function showhelp11() {    
+        document.getElementById("document11").style.display = "block";
+        document.getElementById("document12").style.display = "none";
+    };
+
+    function showhelp12() {
+        document.getElementById("document11").style.display = "none";
+        document.getElementById("document12").style.display = "block";
+    };
+
+</script>
+
+</html>

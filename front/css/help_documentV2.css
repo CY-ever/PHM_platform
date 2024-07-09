@@ -1,0 +1,269 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    width: 1660px;
+    margin: 0 auto;
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.left {
+    background: #303641;
+    width: 390px;
+    /* background-color: antiquewhite; */
+    /* overflow: auto; */
+}
+
+.logo {
+    width: 380px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(69, 74, 84, 0.7);
+}
+
+.functiondetail {
+    height: 812px;
+    width: 380px;
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+    /* background-color: aqua; */
+
+}
+
+.menu {
+    width: 380px;
+    /* margin: 0 0; */
+}
+
+.menu .title {
+    height: 45px;
+    width: 380px;
+    padding-right: 0px;
+    line-height: 45px;
+    color: #f3f3f3;
+    /* background-color: aqua; */
+}
+
+.menu .title a {
+    font-style: italic;
+}
+
+.menu .title span {
+    float: right;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 45px;
+    height: 45px;
+    color: #f3f3f3;
+    border-bottom: 1px solid rgba(69, 74, 84, 0.7);
+    display: inline-block;
+    width: 330px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.menu a:hover {
+    /* font-weight: bold; */
+    background: #262b34;
+}
+
+.active {
+    font-weight: bold;
+    background: #262b34;
+}
+
+.menu a img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.menu .content {
+    text-decoration: none;
+}
+
+.menu .content a {
+    text-decoration: none;
+    font-size: 14px;
+    width: 300px;
+    padding-left: 35px;
+}
+
+.right {
+    width: 1300px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border: 1px solid rgba(69, 74, 84, 0.7);
+    /* background-color: aquamarine; */
+}
+
+.topdiv {
+    width: 1280px;
+    height: 95px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    /* background-color: aquamarine; */
+}
+
+.topmenu {
+    margin-left: 10px;
+    width: 1100px;
+    /* background-color: aquamarine; */
+}
+
+.topmenu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.topmenu li {
+    height: 95px;
+    line-height: 95px;
+    font-size: 20px;
+    width: 160px;
+    text-align: center;
+    list-style: none;
+    float: left
+}
+
+.topmenu a {
+    color: #303641;
+    text-decoration: none;
+}
+
+.topmenu a:hover,
+.menu-active {
+    font-weight: bold;
+}
+
+/* .topmenu .navigation {
+    width: 700px;
+    background-color: blueviolet;
+} */
+
+.topmenu .searchdiv {
+    height: 95px;
+    line-height: 95px;
+    text-align: center;
+    /* background-color: rgb(120, 156, 105); */
+
+}
+
+.topmenu .searchdiv #searchbox {
+    width: 230px;
+    height: 40px;
+    font-size: 20px;
+    border: 1px solid;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: 1px;
+    padding-left: 10px;
+    /* background-color: aqua; */
+}
+
+.topmenu .searchdiv #searchbutton {
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    margin-left: -6px;
+    border: 1px solid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    /* background-color:  rgb(27, 168, 233); */
+    /* color:  #ffffff; */
+}
+
+.topmenu .searchdiv #searchbutton:hover {
+    font-weight: bold;
+}
+
+.login {
+    margin-right: 30px;
+    height: 95px;
+    line-height: 95px;
+    float: right
+}
+
+.login img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.bottom .bottomdiv {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.navigate {
+    height: 30px;
+    width: 1280px;
+    border-bottom: 1px solid rgb(235, 231, 231);
+    background-color: rgb(27, 168, 233);
+    /* position: fixed; */
+}
+
+.navigate a {
+    font-size: 17px;
+    margin-left: 15px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navigate a:hover {
+    color: blue;
+}
+
+.detail {
+    width: 1280px;
+    height: 760px;
+    padding-top: 10px;
+    overflow-y: scroll;
+    /* background-color: aquamarine; */
+}
+
+.firsttitle {
+    font-size: 30px;
+    font-weight: bolder;
+    color: rgb(27, 168, 233);
+}
+
+.lessimportant {
+    color: #9b9c98;
+    line-height: 30px;
+}
+
+.secondtitle {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(27, 168, 233);
+}
+
+.text {
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.image {
+    width: 1200px;
+    /* background-color: bisque; */
+    /* margin-left: 100px; */
+    text-align: center;
+    /* border: 1px solid grey; */
+}
+
+.thirdtitle {
+    font-size: 20px;
+    color: rgb(27, 106, 224);
+    border-bottom: 1px solid rgb(82, 236, 152);
+}

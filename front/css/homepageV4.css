@@ -1,0 +1,494 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    width: 1660px;
+    margin: 0 auto;
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.left {
+    background: #303641;
+    width: 350px;
+}
+
+.logo {
+    width: 350px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-bottom: 1px solid rgba(69, 74, 84, 0.7);
+}
+
+.functiondetail {
+    height: 800px;
+    width: 350px;
+    /* background-color: aqua; */
+
+}
+
+.menu {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.menu .title {
+    height: 45px;
+    width: 350px;
+    padding-right: 10px;
+    line-height: 45px;
+    color: #f3f3f3;
+}
+
+.menu .title span {
+    float: right;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 45px;
+    height: 45px;
+    color: #f3f3f3;
+    border-bottom: 1px solid rgba(69, 74, 84, 0.7);
+    display: inline-block;
+    width: 320px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.menu a:hover {
+    font-weight: bold;
+    background: #262b34;
+}
+
+.active {
+    font-weight: bold;
+    background: #262b34;
+}
+
+.menu a img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.menu .content {
+    text-decoration: none;
+}
+
+.menu .content a {
+    text-decoration: none;
+    font-size: 14px;
+    width: 300px;
+    padding-left: 35px;
+}
+
+.right {
+    width: 1310px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border: 1px solid rgba(69, 74, 84, 0.7);
+    /* background-color: aquamarine; */
+}
+
+.topdiv {
+    width: 1280px;
+    height: 95px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    /* background-color: aquamarine; */
+}
+
+.topmenu {
+    margin-left: 10px;
+    width: 1100px;
+    /* background-color: aquamarine; */
+}
+
+.topmenu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.topmenu li {
+    height: 95px;
+    line-height: 95px;
+    font-size: 20px;
+    width: 120px;
+    text-align: center;
+    list-style: none;
+    float: left
+}
+
+.topmenu a {
+    color: #303641;
+    text-decoration: none;
+}
+
+.topmenu a:hover,
+.menu-active {
+    font-weight: bold;
+}
+
+.login {
+    margin-right: 30px;
+    height: 95px;
+    line-height: 95px;
+    float: right
+}
+
+.login img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.moduleshow {
+    height: 250px;
+    width: 1280px;
+    /* background-color: aquamarine; */
+}
+
+.modulediv {
+    height: 190px;
+    width: 1280px;
+    display: flex;
+    /* background-color: bisque; */
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.buttondiv {
+    text-align: right;
+    height: 30px;
+    width: 1280px;
+    padding-bottom: 30px;
+    padding-right: 5px;
+    /* background-color: aquamarine; */
+}
+
+.buttondiv .runbuttondiv {
+    width: 180px;
+    height: 60px;
+    /* background-color: aquamarine; */
+    float: right;
+}
+
+
+.buttondiv button {
+    width: 82px;
+    height: 30px;
+    background: #303641;
+    color: #f3f3f3;
+    margin-top: 10px;
+    /* background-color: antiquewhite; */
+}
+
+/* .buttondiv input {
+    width: 150px;
+    height: 30px;
+    margin-top: 10px;
+} */
+
+.buttondiv button:hover {
+    font-weight: bold;
+}
+
+.buttondiv .progressdiv {
+    /* background-color: rgb(99, 228, 106); */
+    width: 700px;
+    height: 40px;
+    float: left;
+    margin-top: 10px;
+    text-align: left;
+    font-size: 18px;
+    display: none;
+}
+
+.buttondiv .progressdiv .progressbarout {
+    width: 600px;
+    height: 20px;
+    margin-top: 5px;
+    /* background-color: bisque; */
+    float: right;
+    border: 1px solid black;
+}
+
+.buttondiv .progressdiv .progressbarin {
+    width: 1px;
+    height: 20px;
+    background-color: rgb(19, 18, 18);
+}
+
+/* for V4 */
+/* .moduleshow .twoinone {
+    background-color: aquamarine;
+    height: 126px;
+    width: 266px;
+    margin-top: 20px;
+    margin-left: 2px;
+    float: left;
+    display: none;
+} */
+
+.moduleshow .module {
+    margin-top: 20px;
+    height: 100px;
+    width: 200px;
+    padding: 10px;
+    background-color: #f3f3f3;
+    float: left;
+    display: none;
+    border: 1px solid #ccc;
+    line-height: 25px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 20px 20px;
+}
+
+.moduleshow .module:hover {
+    cursor: pointer;
+}
+
+/* for V4 */
+/* .moduleshow .connection {
+    height: 50px;
+    
+    margin-top: 38px;
+    background-color: aqua;
+    float: left;
+    display: none;
+} */
+
+/* for V3 */
+.moduleshow .connection {
+    height: 50px;
+    width: 40px;
+    margin-top: 60px;
+    float: left;
+    display: none;
+}
+
+.moduleshow .module a {
+    text-decoration: none;
+    color: #303641;
+}
+
+.moduleshow .module .clickarea {
+    /* background-color: aqua; */
+    height: 80px;
+    width: flex;
+}
+
+.moduleshow .module .btn1,
+.btn2,
+.btn3,
+.btn4,
+.btn5 {
+    width: 60px;
+    height: 25px;
+    background: #303641;
+    color: #f3f3f3;
+    border-radius: 10px;
+    margin-top: 0px;
+    float: right;
+}
+
+.moduleshow .modulediv .module button:hover {
+    font-size: larger;
+}
+
+.parametersetting {
+    width: 1280px;
+    height: 610px;
+    display: flex;
+    padding-top: 10px;
+    /* background-color: rgb(72, 16, 224); */
+
+}
+
+
+.parametersetting .methodselect {
+    height: 610px;
+    width: 270px;
+    /* background-color: aqua; */
+    overflow: auto;
+
+}
+
+.methodselect label {
+    width: 230px;
+    line-height: 18px;
+    margin-top: 5px;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.methodselect .moduleFER label {
+    width: 300px;
+    line-height: 18px;
+    margin-top: 5px;
+    background: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.methodselect input {
+    border: none;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.methodselect input:checked {
+    width: 20px;
+}
+
+.parametersetting .setparameter {
+    height: 600px;
+    width: 1000px;
+    padding-left: 10px;
+    padding-top: 10px;
+    /* background-color: aqua; */
+    overflow: auto;
+
+}
+
+.parametersetting .methodselect .moduleBDS,
+.moduleDASG,
+.moduleDP,
+.moduleFER,
+.moduleFDRP {
+    height: 600px;
+    width: 250px;
+    display: none;
+    /* background-color: aqua; */
+    /* overflow: auto; */
+}
+
+.parametersetting .setparameter .method {
+    display: none;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.parametersetting .setparameter #BDSmethod2 .picofbearing {
+    height: 570px;
+    width: 300px;
+    float: left;
+    line-height: 30px;
+    /* background-color: aqua; */
+}
+
+.parametersetting .setparameter #BDSmethod2 .parametent {
+    height: 570px;
+    width: 600px;
+    float: left;
+    line-height: 30px;
+    /* background-color: aqua; */
+
+}
+
+.parametersetting .setparameter #BDSmethod2 .parametent .inputbox {
+    width: 50px;
+    border: 1px solid #ccc;
+}
+
+.parametent {
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
+    /* background-color: aquamarine; */
+}
+
+/* 模块一参数布局 */
+.pbdiv {
+    width: 600px;
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.psdiv {
+    width: 300px;
+    /* display: block; */
+    /* background-color: beige; */
+}
+
+.parametent p {
+
+    font-weight: bolder;
+}
+
+/* 方法参数保存按钮save */
+.method button {
+    width: 80px;
+    height: 30px;
+    background: #303641;
+    color: #f3f3f3;
+    margin-top: 20px;
+}
+
+.method button:hover {
+    font-weight: bolder;
+}
+
+/* 模块文件上传按钮upload */
+.method .fileuploadbutton button {
+    width: 80px;
+    height: 22px;
+    background: #eff0f1;
+    color: #080808;
+    border: 1px solid;
+}
+
+.method .fileuploadbutton button:hover {
+    font-weight: bolder;
+}
+
+/* 输入框设置 */
+.inputbox {
+    width: 100px;
+}
+
+.inputlabel {
+    width: 230px;
+    /* background-color: aqua; */
+    display: inline-block;
+}
+
+/* FDRP方法6的参数div设置 */
+.FDRP6Parameter {
+    /* background-color: aqua; */
+    width: 280px;
+    float: left;
+}
+
+.FDRP6Upload {
+    /* background-color: beige; */
+    width: 630px;
+    height: 465px;
+    float: right;
+}
+
+/* FDRP方法12的参数div设置 */
+.FDRP12Parameter {
+    /* background-color: aqua; */
+    width: 280px;
+    float: left;
+}
+
+.FDRP12Upload {
+    /* background-color: beige; */
+    width: 630px;
+    height: 525px;
+    float: right;
+}

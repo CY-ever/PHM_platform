@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="test" style="height: 200px; width: 200px; background-size: contain;"></div>
+    <div>
+        <button onclick="fun()">获取</button>
+    </div>
+</body>
+<script src="js/jquery-3.6.0.js" type="text/javascript"></script>
+<script>
+    var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTkyOTA4MDksInVzZXJfaWQiOjEsImlzX3JlZnJlc2giOmZhbHNlfQ.ajWuOKOftW_35t6wjkYLsZEYklCQ_uZBDkwWFaYzfb4";
+    function fun() {
+        var xmlhttp = new XMLHttpRequest();
+        var test = document.getElementById("test");
+        xmlhttp.open("GET", "http://localhost:8000/app/tasks/results", true);
+        xmlhttp.setRequestHeader("Authorization", token);
+        xmlhttp.responseType = "blob";
+        xmlhttp.onload = function () {
+            console.log(this);
+            if (this.status == 200) {
+                var blob = this.response;
+                console.log(blob);
+                //该方式用于将图片放置在已经存在的元素中
+                // var reader = new FileReader();
+                // reader.readAsDataURL(blob);  // dataurl用于转换为图片的地址
+                // reader.onload = function (e) {
+                //     console.log(e);
+                //     img = e.target.result; // 图片地址示例
+                // }
+                //下面方式用于创建新的元素显示
+                var img = document.createElement("img");
+                img.onload = function(e) {
+                    window.URL.revokeObjectURL(img.src);
+                };
+                img.src = window.URL.createObjectURL(blob);
+                test.appendChild(img);
+
+            }
+        }
+        xmlhttp.send();
+    };
+
+
+    // function fun() {
+    //     var xmlhttp = new XMLHttpRequest();
+    //     var img;
+    //     xmlhttp.open("GET", "http://localhost:8000/app/tasks/results", true);
+    //     xmlhttp.setRequestHeader("Authorization", token);
+    //     xmlhttp.responseType = "blob";
+    //     xmlhttp.onload = function () {
+    //         console.log(this);
+    //         if (this.status == 200) {
+    //             var blob = this.response;
+    //             console.log(blob);
+
+    //             img = document.getElementById("test");
+
+    //             img.onload = function(e) {
+    //                 window.URL.revokeObjectURL(img.src);
+    //             };
+
+    //             img.src = window.URL.createObjectURL(blob);
+
+    //         }
+    //     }
+    //     xmlhttp.send();
+    // };
+
+
+
+
+</script>
+
+</html>

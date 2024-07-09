@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .regist {
+            margin: 80px auto;
+            padding: 20px;
+            background-image: url("../images/loginpic.png");
+            background-size: 100% 100%;
+            height: 500px;
+            width: 400px;
+            position: relative;
+        }
+
+        .regist .logo {
+            margin-top: 60px;
+            margin-left: 90px;
+            width: auto;
+            height: 30px;
+            font-size: larger;
+            color: red;
+        }
+
+        .regist .account {
+            margin-top: 100px;
+            margin-left: 60px;
+            color: #f3f3f3;
+        }
+
+        .regist .password {
+            margin-top: 20px;
+            margin-left: 60px;
+            color: #f3f3f3;
+        }
+
+        .regist .confirmpassword {
+            margin-top: 20px;
+            margin-left: 60px;
+            margin-bottom: 20px;
+            color: #f3f3f3;
+        }
+
+        .regist .account::after,
+        .password::after,
+        .confirmpassword::after {
+            content: '*';
+            color: rgb(250, 11, 11);
+            font-size: 100%;
+        }
+
+        .regist button {
+            margin-top: 10px;
+            margin-left: 100px;
+            height: 20px;
+            width: 200px;
+            background: #303641;
+            color: #f3f3f3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="regist">
+        <div class="logo">
+            LOGO
+        </div>
+        <form id="registform" method="post" action="http://localhost:8000/app/user/register">
+            <div class="account">
+                &nbsp;&nbsp;Account&nbsp;:&nbsp;
+                <input type="text" class="registdata" id="account" value="" placeholder="Enter email-adress">
+            </div>
+            <div class="password">
+                Password&nbsp;:&nbsp;
+                <input type="password" class="registdata" id="password" value="" placeholder="Enter password">
+            </div>
+            <div class="confirmpassword">
+                &nbsp;&nbsp;Confirm&nbsp;:&nbsp;
+                <input type="password" id="confirmpassword" value="" placeholder="Enter confirmpassword">
+            </div>
+            <div id="insert"
+                style="display: none; color: red; text-align: center; width: 250px; height: 20px; margin-left: 80px;">
+            </div>
+            <div class="button">
+                <button type="submit" name="chkBtn" id="regist" style="width: 200px;margin-bottom: 10px;"
+                    onclick="CheckRegist()">Confirm
+                    and enroll</button>
+                <button type="button" id="loginpage" style="width: 200px;"
+                    onclick="window.location.href = 'login.html'">To login</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function ToLogin() {
+        window.location.href = "login.html";
+    };
+
+    function CheckRegist() {
+        event.preventDefault();
+        // var form = document.getElementById("loginform");
+        var formData = new Object();
+        var inputElement = document.getElementsByClassName("registdata");
+        // 输入框判断规则
+        if (document.getElementById("account").value.trim() == "" || document.getElementById("account").value == "") {
+            // alert('<*>is required!!');
+            document.getElementById("insert").style.display = "block";
+            document.getElementById("insert").innerHTML = " * is required!";
+            return false;
+        }
+        if (document.getElementById("password").value.trim() == "" || document.getElementById("password").value == "") {
+            // alert('<*>is required!!');
+            document.getElementById("insert").style.display = "block";
+            document.getElementById("insert").innerHTML = " * is required!";
+            return false;
+        }
+        if (document.getElementById("confirmpassword").value == "" || document.getElementById("confirmpassword").value.trim() == "") {
+            // alert('<*>is required!!');
+            document.getElementById("insert").style.display = "block";
+            document.getElementById("insert").innerHTML = " * is required!";
+            return false;
+        } else if (document.getElementById("password").value != document.getElementById("confirmpassword").value) {
+            // alert('please reconfirm your password!!');
+            document.getElementById("insert").style.display = "block";
+            document.getElementById("insert").innerHTML = "please reconfirm your password!";
+            document.getElementById("password").value = "";
+            document.getElementById("confirmpassword").value = "";
+            return false;
+        }
+        // 给对象赋值
+        for (var i = 0; i < inputElement.length; i++) {
+            formData[inputElement[i].id] = inputElement[i].value;
+        }
+        // 性别输入的暂时不要
+        // if (document.getElementById("male").checked) {
+        //     formData.gender = 0;
+        // } else if (document.getElementById("female").checked) {
+        //     formData.gender = 1;
+        // } else{
+        //     formData.gender = "";
+        // }
+        console.log(formData);
+        document.getElementById("insert").style.display = "None";
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                var rec = this.responseText;
+                var objrec = JSON.parse(rec);
+
+                if (objrec.message === "OK" && this.status == 200) {
+
+                    console.log(objrec.data);
+                    document.getElementById("insert").style.display = "block";
+                    document.getElementById("insert").innerHTML = " regist successful!";
+                    // window.location.href = 'login.html'
+                    window.setTimeout(ToLogin, 2000);
+                }
+            } else {
+                console.log('098679');
+                var rec = this.responseText;
+                var objrec = JSON.parse(rec);
+                alert(objrec.message);
+            }
+
+        };
+
+        httpRequest.open("post", "http://localhost:8000/app/user/register", true);
+        httpRequest.setRequestHeader('Content-Type', 'application/json');
+        httpRequest.send(JSON.stringify(formData));
+    };
+
+</script>
+
+</html>

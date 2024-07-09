@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload</title>
+</head>
+
+<body>
+    <!-- <form method="post" name="upload" action="http://localhost:8000/app/user/upload">
+        <input type="file" id="fileUpload" name="data">
+        <input type="text" id="token" name="token" placeholder="token">
+        <input type="submit" onclick="chksubmit()">
+    </form> -->
+    <div>
+        <input type="file" id="fileUpload" name="data">
+        <input type="text" id="token" name="token"  placeholder="token">
+        <input type="submit" id="chksubmit">
+    </div>
+</body>
+
+<script src="js/jquery-3.6.0.js" type="text/javascript"></script>
+<script>    
+
+    $('#chksubmit').on('click', function(){
+        var myform = new FormData();
+        var eee = document.getElementById("fileUpload").files[0];
+        console.log(eee);
+        // myform.data = eee;
+        myform.append("data", eee);
+        // myform.append('data', $("#fileUpload").files);
+        console.log(myform);
+        var token = document.getElementById("token").value;
+        $.ajax({
+            url: "http://localhost:8000/app/user/upload",
+            type: "post",
+             data: myform,
+            // beforeSend:function(XMLHttprequest){
+            //     XMLHttprequest.setRequestHeader("Authorization", token);
+            // },
+            headers: { "Authorization": token },
+            processData: false,                // jQuery不要去处理发送的数据
+            contentType: false,                // jQuery不要去设置Content-Type请求头
+            success: function (data) {
+                console.log(data);
+            }
+        });
+    })
+
+    // function chksubmit() {
+        // event.preventDefault();
+        // var formData = new FormData();
+        // var eee = document.getElementById("fileUpload").files[0];
+        // formData.data = eee;
+        // formData.append("data", eee);
+
+
+        // var token = document.getElementById("token").value;
+        // console.log(formData);
+        // console.log(formData.has("data"));
+
+        // var httpRequest = new XMLHttpRequest();
+        // httpRequest.open("post", "http://localhost:8000/app/user/upload", true);
+        // httpRequest.onreadystatechange = function () {
+        //     if (this.readyState == 4) {
+        //         var receive = this.responseText;
+        //         var objreceive = JSON.parse(receive);
+        //         if (objreceive.message === "file upload successfully!" && this.status == 200) {
+        //             alert('received');
+        //         }
+        //         else {
+        //             alert('sasasasasasas');
+        //         }
+        //     }
+        // };
+        // httpRequest.setRequestHeader('Content-Type', 'multipart/form-data');
+        // httpRequest.setRequestHeader('Authorization', token);
+        // httpRequest.send(formData);
+
+
+        // //simulate a file MIME POST request.
+        // httpRequest.setRequestHeader("Content-Type", "multipart/form-data, boundary=" + boundary);  
+
+        // httpRequest.setRequestHeader("Content-Length", fileSize);
+        // var body = '';
+        // body += "--" + boundary + "\r\n";
+        // body += "Content-Disposition: form-data; name=\"" + dropbox.getAttribute('name') + "\"; filename=\"" + fileName + "\"\r\n";
+        // body += "Content-Type: " + fileType + "\r\n\r\n";
+        // body += fileData + "\r\n";
+        // body += "--" + boundary + "--\r\n";
+
+        // httpRequest.sendAsBinary(body)
+
+
+        // 封装ajax
+        // var myform = new FormData();
+        // var eee = document.getElementById("fileUpload").files[0];
+        // console.log(eee);
+        // myform.data = eee;
+        // myform.append("data", eee);
+        // // myform.append('data', $("#fileUpload").files);
+        // console.log(myform);
+        // var token = document.getElementById("token").value;
+
+        // $.ajax({
+        //     url: "http://localhost:8000/app/user/upload",
+        //     type: "post",
+        //     data: myform,
+        //     beforeSend:function(XMLHttprequest){
+        //         XMLHttprequest.setRequestHeader("Authorization", token);
+        //     },
+        //     // headers: { "Authorizaton": token },
+        //     processData: false,                // jQuery不要去处理发送的数据
+        //     contentType: false,                // jQuery不要去设置Content-Type请求头
+        //     success: function (data) {
+        //         console.log(data);
+        //     }
+        // });
+
+
+        // //fetch API
+        // const formData = new FormData();
+        // const fileField = document.querySelector('input[type="file"]');
+        // var token = document.getElementById("token").value;
+
+        // // let myheader = new Headers();
+        // // myheader.append('Authorization', token)
+
+        // formData.append('data', fileField.files[0]);
+        // console.log('formData')
+
+        // fetch('http://localhost:8000/app/user/upload', {
+        //     headers: {
+        //         'Authorization': token,
+        //     },
+        //     method: 'POST',
+        //     body: formData
+        // })
+        //     .then(response => response.json())
+        //     .then(result => {
+        //         console.log('Success:', result);
+        //     })
+        //     .catch(error => {
+        //         console.error('Error:', error);
+        //     });
+
+    // };
+</script>
+
+</html>

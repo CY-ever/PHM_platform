@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .signin {
+            margin: 80px auto;
+            padding: 20px;
+            background-image: url("../images/loginpic.png");
+            background-size: 100% 100%;
+            height: 500px;
+            width: 400px;
+            position: relative;
+        }
+
+        .signin .logo {
+            margin-top: 60px;
+            margin-left: 90px;
+            width: auto;
+            height: 30px;
+            font-size: larger;
+            color: red;
+        }
+
+        .signin .account {
+            margin-top: 100px;
+            margin-left: 50px;
+            width: 280px;
+            height: auto;
+            color: #f3f3f3;
+            /* background-color: blueviolet; */
+        }
+
+        .signin .password {
+            margin-top: 50px;
+            margin-left: 50px;
+            width: 280px;
+            height: auto;
+            color: #f3f3f3;
+            /* background-color: blueviolet; */
+        }
+
+        .signin button {
+            margin: 15px 90px;
+            height: 20px;
+            width: 200px;
+            background: #303641;
+            color: #f3f3f3;
+        }
+
+        #tishi {
+            color: #f3f3f3;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signin">
+        <div class="logo">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOGO
+        </div>
+        <form id="loginform" method="post" action="http://localhost:8000/app/user/authorization">
+            <div class="account">
+                &nbsp;&nbsp;Account&nbsp;:&nbsp;
+                <input type="text" id="account" value="" placeholder="Enter email-adress">
+            </div>
+            <div class="password">
+                Password&nbsp;:&nbsp;
+                <input type="password" id="password" value="" placeholder="Enter Password">
+            </div>
+            <div id="tishi"></div>
+            <div class="button">
+                <button type="submit" name="chkBtn" id="login" style="width: 200px;margin-bottom: 10px;"
+                    onclick="CheckLogin()">Sign in</button>
+                <button type="button" style="width: 200px;" onclick="window.location.href='regist.html'">To
+                    register</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    // document.getElementById('chkBtn').addEventListener('click', function () {
+    //     var username = document.getElementById("username").value;
+    //     var password = document.getElementById("password").value;
+    //     if (username == 'admin' && password == '88888888') {
+    //         // window.location.href = 'http://www.baidu.com';
+    //         window.location.href = 'D:/TU Berlin/Imstudium/SMS5/Masterarbeit/scr/功能页.html';
+    //     } else {
+    //         alert('用户名或密码错误');
+    //     }
+    // });
+
+    function notsuccess() {
+        document.getElementById("tishi").style.display = "block";
+        document.getElementById("tishi").innerHTML = "Email or Password not available!";
+    };
+
+    function CheckLogin() {
+        event.preventDefault();
+        var form = document.getElementById("loginform");
+        var formData = new Object();
+        var inputElement = document.getElementsByTagName("input");
+        for (var i = 0; i < inputElement.length; i++) {
+            formData[inputElement[i].id] = inputElement[i].value;
+        }
+        console.log(formData);
+        var httpRequest = new XMLHttpRequest();
+        httpRequest.onreadystatechange = function () {
+            if (this.readyState == 4) {
+                var rec = this.responseText;
+                var objrec = JSON.parse(rec);
+                var login_token = objrec.login_token;
+                console.log(login_token);
+                localStorage.setItem("usertoken", login_token);
+                if (objrec.message === "OK" && this.status == 200) {
+                    document.getElementById("tishi").style.display = "None";
+                    window.location.href = "homepageV10.html";
+                }
+            } else {
+                // document.getElementById("tishi").style.display = "block";
+                // document.getElementById("tishi").innerHTML = "Email or Password not available!";
+                window.setTimeout(notsuccess, 1000);
+            }
+
+        };
+
+        httpRequest.open("post", "http://localhost:8000/app/user/authorization", true);
+        httpRequest.setRequestHeader('Content-Type', 'application/json');
+        httpRequest.send(JSON.stringify(formData));
+    };
+
+
+
+</script>
+
+</html>

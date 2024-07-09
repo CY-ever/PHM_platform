@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data center</title>
+    <link rel="stylesheet" href="../css/database_intro.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="logo"><a href="#"><img src="../images/logo.png" width="120" /></a></div>
+            <div class="functiondetail">
+                <div class="menu">
+                    <div class="title">
+                        <a href="#" onclick="showcwru()"><img src="../images/icon2.png" width="20" />&nbsp;CWRU Data
+                            Center<span>></span></a>
+                    </div>
+                    <div class="content">
+
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="title">
+                        <a href="#" onclick="showims()"><img src="../images/icon2.png" width="20" />&nbsp;IMS Bearing
+                            Data<span>></span></a>
+                    </div>
+                    <div class="content">
+
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="title">
+                        <a href="#" onclick="showfemto()"><img src="../images/icon2.png" width="20" />&nbsp;FEMTO-ST
+                            Dataset<span>></span></a>
+                    </div>
+                    <div class="content">
+
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="title">
+                        <a href="#" onclick="showpader()"><img src="../images/icon2.png" width="20" />&nbsp;Paderborn
+                            Bearing Data<span>></span></a>
+                    </div>
+                    <div class="content">
+
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="title">
+                        <a href="#" onclick="showxjtu()"><img src="../images/icon2.png" width="20" />&nbsp;XJTU-SY
+                            Dataset<span>></span></a>
+                    </div>
+                    <div class="content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="topdiv">
+                <div class="topmenu">
+                    <ul>
+                        <li><a href="../html/homepageV10.html">Homepage</a></li>
+                        <li><a href="../html/databse_intro.html" class="menu-active">Data Center</a></li>
+                        <li><a href="../html/help_documentV2.html">Help</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="login">
+                    <img src="../images/tx.png" width="40" /> Muster ▾
+                </div>
+            </div>
+
+            <div class="bottom" style="height: 810px; overflow: auto;">
+                <div class="bottomdiv" id="document1">
+                    <div class="detail" id="detail1">
+                        <div class="firsttitle">
+                            Case western reserve university (CWRU) bearing dataset
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Dataset overview
+                        </div>
+                        <div class="text">
+                            This is a well-known dataset in the field of bearing fault diagnosis, with experimental data
+                            from the CWRU bearing data center. The test bench and dataset are described below.
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Bench information
+                        </div><br>
+                        <div class="text">
+                            The bench for the CWRU dataset consists of a 2 hp motor, a torque transducer/translator, a
+                            dynamometer, and an electronic controller. An acceleration sensor is placed at the fan end
+                            of the motor housing and at the drive end to collect the acceleration signal from the
+                            bearings. A 16-channel data logger collects the vibration signals. To quantify the influence
+                            of fault location on the bearing vibration response, the outer ring fault was placed at
+                            three different locations, at 3 o'clock (directly in the load zone), 6 o'clock (orthogonal
+                            to the load zone), and 12 o'clock.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/CWRU/CWRU1.png" alt="" style="width: 700px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Characteristics of tested bearings
+                        </div><br>
+                        <div class="text">
+                            There are two types of bearings on the bench, the bearing SKF-6205-2RS JEM located at the
+                            drive end with sampling frequencies of 12 kHz and 48 kHz, and the bearing SKF-6203-2RS JEM
+                            located at the fan end with the sampling frequency of 12 kHz. The specific parameters of the
+                            two types of bearings are shown in Tables 1 and 2 [2].
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/CWRU/CWRU2.png" alt=""
+                                title="Table 1: Specifications of bearing SKF-6205-2RS JEM [2]" style="width: 700px;">
+                        </div><br><br>
+                        <div class="image">
+                            <img src="../databases/CWRU/CWRU3.png" alt=""
+                                title="Table 2: Specifications of bearing SKF-6203-2RS JEM [2]" style="width: 700px;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Operating conditions
+                        </div><br>
+                        <div class="text">
+                            The data from CWRU dataset is the acceleration signal of a bearing fault with three single
+                            points (inner ring fault, outer ring fault, and rolling element fault). There are four fault
+                            diameters, 0.007 inches, 0.014 inches, 0.021 inches, and 0.028 inches, respectively. The
+                            damage to the bearings is introduced by electro-discharge machining (EDM), so this dataset
+                            can only be used for fault diagnosis rather than RUL prediction. The bearings in each
+                            condition are also operated at 0 hp, 1 hp, 2 hp, and 3 hp load, corresponding to motor
+                            speeds of 1797 rpm, 1772 rpm, 1750 rpm, and 1730 rpm. Table 3 lists the four operating
+                            conditions. Tables 4-7 present the details of the four operating conditions.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/CWRU/CWRU4.png" alt="" title="Table 3: Conditions of CWRU [3]"
+                                style="width: 300px;">
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/CWRU/CWRU5.png" alt="" title="Table 4: CWRU normal baseline data [3]"
+                                style="width: 700px;">
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/CWRU/CWRU6.png" alt=""
+                                title="Table 5: CWRU 12 kHz drive end bearing fault data [3]" style="width: 700px;">
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/CWRU/CWRU7.png" alt=""
+                                title="Table 6: CWRU 48 kHz drive end bearing fault data [3]" style="width: 700px;">
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/CWRU/CWRU8.png" alt=""
+                                title="Table 7: CWRU 12 kHz fan end bearing fault data [3]" style="width: 700px;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Reference
+                        </div><br>
+                        <div class="text">
+                            [1] Wade A Smith and Robert B Randall. Rolling element bearing diagnostics using
+                            the case western reserve university data: A benchmark study. Mechanical systems
+                            and signal processing, 64:100-131, 2015. <br>
+                            [2] HAKAN ÇALIS, ABDÜLKADIR Cakir, and Emre Dandil. Artificial immunity- ˙
+                            based induction motor bearing fault diagnosis. Turkish Journal of Electrical Engineering and
+                            Computer Sciences, 21(1):1-25, 2013. <br>
+                            [3] Case Western Reserve University. Case Western Reserve University Bearing Data Center
+                            Website. http://csegroups.case.edu/bearingdatacenter/home. Oct. 2016.
+                        </div><br>
+                    </div>
+                </div>
+
+                <div class="bottomdiv" id="document2">
+                    <div class="detail" id="detail2">
+                        <div class="firsttitle">
+                            Intelligent maintenance system (IMS) bearing dataset
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Dataset overview
+                        </div>
+                        <div class="text">
+                            The IMS bearing dataset is from the Center for IMS in the University of Cincinnati and
+                            consists of three run-to-failure experiments on a loaded shaft [1]. The data are obtained by
+                            conducting endurance tests of natural degradation [2].
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Bench information
+                        </div><br>
+                        <div class="text">
+                            Figure 1 shows the bearing test bench of IMS, which mainly consists of an AC motor, a loaded
+                            shaft, four roller bearings, a thermocouple, and accelerometers. In the first experiment,
+                            there are vertical and horizontal accelerometers in the housing of each bearing, which means
+                            that the vertical and horizontal acceleration signals of each bearing were recorded. And in
+                            the other two experiments, there is only one accelerometer in the housing of each bearing.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/IMS/IMS1.png" alt="" style="width: 700px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Characteristics of tested bearings
+                        </div><br>
+                        <div class="text">
+                            The parameters of the four bearings (Rexnord ZA-2115) are given in Table 1.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/IMS/IMS2.png" alt="" style="width: 700px;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Vibration signals
+                        </div><br>
+                        <div class="text">
+                            The sampling frequency is 20 kHz, and 1 second is acquired every 10 minutes, recording 20480
+                            samples per second.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/IMS/IMS3.png" alt="" style="width: 600px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Operating conditions
+                        </div><br>
+                        <div class="text">
+                            Table 2 lists detailed information on the IMS datasets. Datasets 1, 2, and 3 represent three
+                            experiments, respectively. The first dataset includes the acceleration signals of the
+                            bearings in the vertical and horizontal directions. The second and third datasets only
+                            collected acceleration signals in the horizontal direction.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/IMS/IMS4.png" alt="" style="width: 700px;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Reference
+                        </div><br>
+                        <div class="text">
+                            [1] J Lee, H Qiu, G Yu, Ja Lin, et al. Bearing data set. IMS, University of Cincinnati, NASA
+                            Ames Prognostics Data Repository, Rexnord Technical Services, 2007. <br>
+                            [2] William Gousseau et al. "Analysis of the Rolling Element Bearing data set of the Center
+                            for Intelligent Maintenance Systems of the University of Cincinnati". In: CM2016. 2016.<br>
+                            [3] Hai Qiu, Jay Lee, Jing Lin. “Wavelet Filter-based Weak Signature Detection Method and
+                            its Application on Roller Bearing Prognostics.” Journal of Sound and Vibration 289 (2006)
+                            1066-1090.
+                        </div><br>
+                    </div>
+                </div>
+
+                <div class="bottomdiv" id="document3">
+                    <div class="detail" id="detail3">
+                        <div class="firsttitle">
+                            FEMTO-ST Dataset
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Dataset overview
+                        </div>
+                        <div class="text">
+                            The challenge datasets were provided by FEMTO-ST Institute. All data can be used for bearing
+                            remaining useful life prediction.
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Bench information
+                        </div><br>
+                        <div class="text">
+                            Experiments were carried out on a laboratory experimental platform (PRONOSTIA) that enables
+                            accelerated degradation of bearings under constant and/or variable operating conditions,
+                            while gathering online health monitoring data (rotating speed, load force, temperature,
+                            vibration). [1]
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/femto/femto1.png" alt=""
+                                style="width: 700px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Characteristics of tested bearings
+                        </div><br>
+                        <div class="text">
+                            &nbsp;&nbsp;o Fitted with two synthetic rubb er seals to prevent leakage of lubricant as
+                            well as entry
+                            of dust, water and other harmful material <br>
+                            &nbsp;&nbsp;o Outside Race Diameter D=32 mm<br>
+                            &nbsp;&nbsp;o Inside Diameter d=20 mm<br>
+                            &nbsp;&nbsp;o Thickness B=7 mm<br>
+                            &nbsp;&nbsp;o Load Ratings Static: 2470 N<br>
+                            &nbsp;&nbsp;o Load Ratings Dynamic: 4000 N<br>
+                            &nbsp;&nbsp;o Maximum Speed : 13000 rpm [1]<br>
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/femto/femto2.png" alt=""
+                                style="width: 700px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Vibration signals
+                        </div><br>
+                        <div class="text">
+                            &nbsp;&nbsp;o Vibration signals (horizontal and vertical)<br>
+                            &nbsp;&nbsp;o Sampling frequency: 25.6 kHz<br>
+                            &nbsp;&nbsp;o Recordings: 2560 samples (i.e. 1/10 s) are recorded each 10 seconds [1]<br>
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/femto/femto3.png" alt=""
+                                style="width: 600px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Temperature signal
+                        </div><br>
+                        <div class="text">
+                            &nbsp;&nbsp;o Temp erature signals<br>
+                            &nbsp;&nbsp;o Sampling frequency: 10 Hz<br>
+                            &nbsp;&nbsp;o Recordings: 600 samples are recorded each minute<br>
+                        </div><br>
+                        <div class="thirdtitle">
+                            Characteristics of the temperature sensor
+                        </div>
+                        <div class="text">
+                            Temperature sensor Type platinum RTD PT100 PROSENSOR <br>
+                            &nbsp;&nbsp;o Class 1/3 DIN norm IEC 751<br>
+                            &nbsp;&nbsp;o Nominal resistance : 100 ohms<br>
+                            &nbsp;&nbsp;o Usage range : -200 to +600 °C<br>
+                            &nbsp;&nbsp;o Diameter : 2.8 mm<br>
+                            &nbsp;&nbsp;o Length : 25 mm<br>
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/femto/femto4.png" alt=""
+                                style="width: 600px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Operating conditions
+                        </div><br>
+                        <div class="text">
+                            &nbsp;&nbspo Conditions 1: First op erating condi tions: 1800 rpm and 4000 N;<br>
+                            &nbsp;&nbspo Conditions 2: Second op erating condi tions: 1650 rpm and 4200 N;<br>
+                            &nbsp;&nbspo Conditions 3: Third op erating cond itions: 1500 rpm and 5000 N<br>
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/femto/femto5.png" alt=""
+                                style="width: 600px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="image">
+                            <img src="../databases/femto/femto6.png" alt=""
+                                style="width: 350px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Reference
+                        </div><br>
+                        <div class="text">
+                            [1] Lessmeier C, Kimotho J K, Zimmer D, et al. Condition monitoring of bearing damage in
+                            electromechanical drive systems by using motor current signals of electric motors: A
+                            benchmark data set for data-driven classification[C]//PHM Society European Conference. 2016,
+                            3(1).
+                        </div><br>
+                    </div>
+                </div>
+
+                <div class="bottomdiv" id="document4">
+                    <div class="detail" id="detail4">
+                        <div class="firsttitle">
+                            Paderborn Bearing Datasets
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Dataset overview
+                        </div>
+                        <div class="text">
+                            The Paderborn bearing dataset was designed and provided by the Paderborn University. The
+                            data set contains a total of 128 sets of experimental data for 32 bearings under 4 working
+                            conditions. All of the data can be used for bearing fault diagnosis. Generating Real Bearing
+                            Damage data enables remaining useful life prediction.
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Bench information
+                        </div><br>
+                        <div class="thirdtitle">
+                            Artificial damage and healthy (undamaged) bearings
+                        </div>
+                        <div class="text">
+                            The test rig consists of several modules: an electric motor (1), a torque-measurement shaft
+                            (2), a rolling bearing test module (3), a flywheel (4) and a load motor (5).<br>
+                            The motor (1) is a 425 W Permanent Magnet Synchronous Motor (PMSM) with a nominal torque of
+                            T = 1.35 Nm, a nominal speed of n = 3,000 rpm, a nominal current of I = 2.3 A and a pole
+                            pair number p = 4 (Type SD4CDu8S-009, Hanning Elektro-Werke GmbH & Co. KG). It is operated
+                            by a frequency inverter (KEB Combivert 07F5E 1D-2B0A) with a switching frequency of 16 kHz.
+                            [1]
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/paderborn/paderborn1.png" alt=""
+                                style="width: 650px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="thirdtitle">
+                            Generating real bearing damage
+                        </div>
+                        <div class="text">
+                            Apparatus for accelerated life time test.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/paderborn/paderborn2.png" alt=""
+                                style="width: 400px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Bearing parameters and category of bearing damage
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/paderborn/paderborn3.png" alt="" style="width: 600px;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Operating conditions
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/paderborn/paderborn4.png" alt="" style="width: 600px;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Data collection
+                        </div><br>
+                        <div class="thirdtitle">
+                            Sampling rate
+                        </div>
+                        <div class="text">
+                            &nbsp;&nbsp;&nbsp;&nbsp;Vibration signal: 64kHz <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Mechanical signal: 4kHz <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Temperature signal: 1Hz <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Motor current signal: 64kHz <br>
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Data introduction
+                        </div><br>
+                        <div class="thirdtitle">
+                            Artificial damage
+                        </div>
+                        <div class="image">
+                            <img src="../databases/paderborn/paderborn5.png" alt="" style="width: 400px;">
+                        </div><br><br>
+                        <div class="thirdtitle">
+                            Healthy (undamaged) bearings
+                        </div>
+                        <div class="image">
+                            <img src="../databases/paderborn/paderborn6.png" alt="" style="width: 600px;">
+                        </div><br><br>
+                        <div class="thirdtitle">
+                            Generating real bearing damage
+                        </div>
+                        <div class="image">
+                            <img src="../databases/paderborn/paderborn7.png" alt="" style="width: 600px;">
+                        </div><br><br>
+                        <div class="thirdtitle">
+                            Damage levels to determine the extent of damage
+                        </div>
+                        <div class="image">
+                            <img src="../databases/paderborn/paderborn8.png" alt="" style="width: 600px;">
+                        </div><br><br>
+                        <div class="secondtitle">
+                            Reference
+                        </div><br>
+                        <div class="text">
+                            [1] Patrick Nectoux, Rafael Gouriveau, Kamal Medjaher, Emmanuel Ramasso, Brigitte Morello,
+                            Nourredine Zerhouni, Christophe Varnier. PRONOSTIA: An Experimental Platform for Bearings
+                            Accelarated Life Test. IEEE International Conference on Prognostics and Health Management,
+                            Denver, CO, USA, 2012.
+                        </div><br>
+                    </div>
+                </div>
+
+                <div class="bottomdiv" id="document5">
+                    <div class="navigate">
+                        <a href="#" onclick="RollToOverview5()">Overview</a>
+                        <a href="#" onclick="RollToIntroduction5()">Introduction</a>
+                        <a href="#" onclick="RollToDetails5()">Details</a>
+                    </div>
+                    <div class="detail" id="detail5">
+                        <div class="firsttitle">
+                            XJTU-SY Bearing Datasets
+                        </div><br><br>
+                        <div class="secondtitle" id="Overview5">
+                            Dataset overview
+                        </div>
+                        <div class="text">
+                            XJTU-SY bearing datasets are provided by the Institute of Design Science and Basic
+                            Component at Xi'an Jiaotong University (XJTU), Shaanxi, P.R. China and the Changxing
+                            Sumyoung Technology Co., Ltd. (SY), Zhejiang, P.R. China. The datasets
+                            contain complete run-to-failure data of 15 rolling element bearings that were acquired
+                            by conducting many accelerated degradation experiments.
+                        </div><br><br>
+                        <div class="secondtitle" id="Introduction5">
+                            Dataset introduction
+                        </div><br>
+                        <div class="thirdtitle">
+                            Bearing testbed
+                        </div>
+                        <div class="text">
+                            Figure shows this bearing testbed, a record of degradation data throughout the
+                            entire aging cycle of the bearing. The bearing test bench is mainly composed of an
+                            alternating current (AC) motor, a digital force display, a motor speed controller, a tested
+                            bearing, a hydraulic loading, support bearings and accelerometers.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/xjtu/xjtu1.png" alt="" style="width: 350px; border: 1px solid grey;">
+                        </div><br><br>
+                        <div class="thirdtitle">
+                            Tested bearing
+                        </div>
+                        <div class="text">
+                            The type of tested bearings is LDK UER204. and the detailed parameters are given.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/xjtu/xjtu2.png" alt="" style="width: 650px;">
+                        </div><br><br>
+                        <div class="thirdtitle">
+                            Operating condition
+                        </div>
+                        <div class="text">
+                            A total of 3 different operating conditions were set in the accelerated degradation
+                            experiments: <br>
+                            &nbsp;&nbsp;1) 2100 rpm (35 Hz) and 12 kN; <br>
+                            &nbsp;&nbsp;2) 2250 rpm (37.5 Hz) and 11 kN; <br>
+                            &nbsp;&nbsp;3) 2400 rpm (40 Hz) and 10 kN. <br>
+                        </div><br>
+                        <div class="thirdtitle">
+                            Sampling setting
+                        </div>
+                        <div class="text">
+                            To collect run-to-failure data from the bearings, two PCB 352C33 accelerometers are placed
+                            on the housing of the bearings being tested. The accelerometers are positioned at 90° to
+                            each other, that is, one is placed on the vertical axis and the other is placed on the
+                            horizontal axis. The sampling frequency is 25.6kHz to record 32 768 samples (i.e., 1.28 s)
+                            every 1 minute.
+                        </div><br><br>
+                        <div class="secondtitle" id="Details5">
+                            Dataset details
+                        </div><br>
+                        <div class="text">
+                            Table lists the detailed information of each tested bearing, including number of CSV files,
+                            bearing lifetime and fault element.
+                        </div><br>
+                        <div class="image">
+                            <img src="../databases/xjtu/xjtu3.png" alt="" style="width: 650px;">
+                        </div><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+</body>
+<script src="../js/jquery-3.6.0.js" type="text/javascript"></script>
+<script>
+    // 隐藏所有子标题
+    $(".menu").each(function () {
+        $(this).children(".content").hide();
+    });
+    // 给主标题邦基点定事件
+    $(".title").each(function () {
+        $(this).click(function () {
+            //添加选中样式
+            $(this).parent(".menu").parent(".functiondetail").children(".menu").children(".title").children("a").removeClass("active");
+            $(this).children("a").addClass("active");
+
+            var clicktitle = $(this).parent(".menu").children(".content");
+            if (clicktitle.css("display") != "none") {
+                clicktitle.hide(200);
+            } else {
+                clicktitle.show(200);
+            }
+        });
+    });
+
+    //全局token
+    var token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NjI3NDQ0NzMsInVzZXJfaWQiOjEsImlzX3JlZnJlc2giOmZhbHNlfQ.OEetjkzINaiXHCbciRnIzd_DoSYWlGteiu-XxvmC0gQ";
+
+    // 创建对象存储需要交互的变量
+    var Alldata = new Object();
+
+    console.log(Alldata);
+
+    //选择台架介绍
+    function showcwru() {
+        document.getElementById("document1").style.display = "block";
+        document.getElementById("document2").style.display = "none";
+        document.getElementById("document3").style.display = "none";
+        document.getElementById("document4").style.display = "none";
+        document.getElementById("document5").style.display = "none";
+
+        document.getElementById("detail1").scrollTop = 0;
+    };
+
+    function showims() {
+        document.getElementById("document1").style.display = "none";
+        document.getElementById("document2").style.display = "block";
+        document.getElementById("document3").style.display = "none";
+        document.getElementById("document4").style.display = "none";
+        document.getElementById("document5").style.display = "none";
+
+        document.getElementById("detail2").scrollTop = 0;
+    };
+
+    function showfemto() {
+        document.getElementById("document1").style.display = "none";
+        document.getElementById("document2").style.display = "none";
+        document.getElementById("document3").style.display = "block";
+        document.getElementById("document4").style.display = "none";
+        document.getElementById("document5").style.display = "none";
+
+        document.getElementById("detail3").scrollTop = 0;
+    };
+
+    function showpader() {
+        document.getElementById("document1").style.display = "none";
+        document.getElementById("document2").style.display = "none";
+        document.getElementById("document3").style.display = "none";
+        document.getElementById("document4").style.display = "block";
+        document.getElementById("document5").style.display = "none";
+
+        document.getElementById("detail4").scrollTop = 0;
+    };
+
+    function showxjtu() {
+        document.getElementById("document1").style.display = "none";
+        document.getElementById("document2").style.display = "none";
+        document.getElementById("document3").style.display = "none";
+        document.getElementById("document4").style.display = "none";
+        document.getElementById("document5").style.display = "block";
+
+        document.getElementById("detail5").scrollTop = 0;
+    };
+
+    //滚动
+    function RollToOverview5() {
+        document.getElementById("Overview5").scrollIntoView(true);
+    };
+
+    function RollToIntroduction5() {
+        document.getElementById("Introduction5").scrollIntoView(true);
+    };
+
+    function RollToDetails5() {
+        document.getElementById("Details5").scrollIntoView(true);
+    };
+
+</script>
+
+</html>
